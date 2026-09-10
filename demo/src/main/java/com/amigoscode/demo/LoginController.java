@@ -5,6 +5,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class LoginController {
     @FXML
     private TextField userNameField;
@@ -15,14 +17,15 @@ public class LoginController {
    private Label msgLabel;
 
     @FXML
-   private void handleLogin(){
+   private void handleLogin() throws IOException {
    String userName = userNameField.getText();
    String password = PasswordField.getText();
 
    if(userName.equals("Antonio") && password.equals("1234")){
-       msgLabel.setText("Login successful!");
+      SceneManager.switchScene("home-view.fxml");
    }else{
        msgLabel.setText("Invalid UserName or password");
+      SceneManager.switchScene("registartion-view.fxml");
    }
     }
 

@@ -1,0 +1,9 @@
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<VBox>
+    <Label text="Student 1"/>
+    <Label text="Student 2"/>
+    <Label text="Student 2"/>
+
+</VBox>
