@@ -1,0 +1,74 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.amigoscode.demo.RegisterController"
+      alignment="CENTER"
+      spacing="15"
+      prefWidth="400"
+      prefHeight="300">
+
+   <Label text="Registration Form"/>
+
+    <TextField
+            fx:id="FirstNameField"
+            promptText="Enter FirstName"
+            maxWidth="250"/>
+    <TextField
+        fx:id="LastNameField"
+        promptText="Enter LastName"
+        maxWidth="250"/>
+
+    <TextField
+            fx:id="UserNameField"
+            promptText="Enter UserName"
+            maxWidth="250"/>
+
+    <PasswordField
+        fx:id="passwordField"
+        promptText="Enter Your Password"
+        maxWidth="250"/>
+
+    <fx:define>
+        <ToggleGroup fx:id="genderToggleGroup" />
+    </fx:define>
+
+<HBox alignment="CENTER" spacing="10">
+        <Label text="Gender:" />
+
+<RadioButton
+    fx:id="maleRadioButton"
+    text="Male"
+    toggleGroup="$genderToggleGroup"/>
+
+    <RadioButton
+        fx:id="femaleRadioButton"
+        text="Female"
+        toggleGroup="$genderToggleGroup"/>
+</HBox>
+
+<DatePicker
+        fx:id="birthdayPicker"
+        promptText="when is your birthday"
+        maxWidth="250"/>
+
+    <HBox alignment="CENTER" spacing="10">
+            <Button
+                text="Register"
+            onAction="#handleRegistration"/>
+        <Button
+            text="Clear"
+        onAction="#clear"/>
+    </HBox>
+
+    <Label fx:id="msgLabel"/>
+
+
+</VBox>
