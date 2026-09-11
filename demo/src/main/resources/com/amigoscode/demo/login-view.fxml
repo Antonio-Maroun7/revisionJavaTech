@@ -33,6 +33,10 @@
             text="Clear"
         onAction="#handleClear"/>
 
+        <Button
+            text="Register"
+            onAction="#handleRegister"/>
+
     </HBox>
 
     <Label fx:id="msgLabel"/>

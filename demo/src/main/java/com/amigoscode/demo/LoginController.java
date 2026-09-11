@@ -26,8 +26,15 @@ public class LoginController {
    }else{
        msgLabel.setText("Invalid UserName or password");
       SceneManager.switchScene("registartion-view.fxml");
+
    }
     }
+
+    @FXML
+    private void handleRegister()throws IOException{
+        SceneManager.switchScene("register-view.fxml");
+    }
+
 
     @FXML
     private void handleClear(){
