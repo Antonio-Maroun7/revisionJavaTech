@@ -4,6 +4,8 @@
 <VBox>
     <Label text="Student 1"/>
     <Label text="Student 2"/>
-    <Label text="Student 2"/>
+    <Label text="Student 3"/>
+    <Label text="Student 4"/>
+    <Label text="Student 5"/>
 
 </VBox>
