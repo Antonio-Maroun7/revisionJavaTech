@@ -21,7 +21,7 @@ public class Student {
     private String studentNumber;
 
     @Column(nullable = false)
-    private String fristname;
+    private String firstname;
 
     @Column(nullable = false)
     private String lastname;
@@ -31,10 +31,12 @@ public class Student {
 
     @Column(unique = true)
     private String email;
-    private String adress;
+    private String address;
     private String phone;
 
     private LocalDate enrollmentDate =LocalDate.now();
+
+    private LocalDate dateOfBirth = LocalDate.now();
 
      @ManyToOne(fetch = FetchType.LAZY)
      @JoinColumn(name = "department_id")
