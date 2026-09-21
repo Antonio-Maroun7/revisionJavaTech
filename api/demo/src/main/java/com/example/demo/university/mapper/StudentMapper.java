@@ -4,7 +4,9 @@ import com.example.demo.university.dto.StudentRequest;
 import com.example.demo.university.dto.StudentResponse;
 import com.example.demo.university.model.Department;
 import com.example.demo.university.model.Student;
+import org.springframework.stereotype.Component;
 
+@Component
 public  class StudentMapper {
     public Student toEntity(
             StudentRequest request,
