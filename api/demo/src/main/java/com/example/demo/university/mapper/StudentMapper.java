@@ -1,5 +1,6 @@
 package com.example.demo.university.mapper;
 
+import com.example.demo.university.dto.DepartmentRequest;
 import com.example.demo.university.dto.StudentRequest;
 import com.example.demo.university.dto.StudentResponse;
 import com.example.demo.university.model.Department;
@@ -38,5 +39,15 @@ public  class StudentMapper {
                 department !=null ? department.getId() : null,
                 department != null ? department.getName() : null
         );
+    }
+
+    public void updateEntity(Student student, StudentRequest request, Department department){
+       student.setStudentNumber(request.studentNumber());
+        student.setFirstname(request.firstName());
+        student.setLastname(request.lastName());
+        student.setEmail(request.email());
+        student.setPhone(request.phone());
+        student.setDateOfBirth(request.dateOfBirth());
+        student.setDepartment(department);
     }
 }
