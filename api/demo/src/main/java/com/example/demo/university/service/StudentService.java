@@ -26,6 +26,12 @@ public class StudentService {
   }
 
   @Transactional
+  public StudentResponse findById(Long id){
+      Student student = findEntity(id);
+      return mapper.toResponse(student);
+  }
+
+  @Transactional
    public StudentResponse create(StudentRequest request){
         Department department = departmentRepository
                 .findById(request.departmentId())
